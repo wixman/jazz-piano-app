@@ -244,10 +244,29 @@ Drop 2: G2-C3-E3-B3`},{text:`HISTORY: Originally a big band arranging trick, it 
 Middle: G4, E4, Bb4
 Bottom: C4`},{text:`HISTORY: George Shearing made this famous. It creates a thick, 'cool' jazz sound that mimics a 5-piece brass section.`,audio:!0,isProgression:!0,exampleChord:{notes:[`F3`,`A3`,`C4`,`D4`,`F4`,`G3`,`Bb3`,`Db4`,`E4`,`G4`,`A3`,`C4`,`E4`,`F4`,`A4`]}}]},"slash-chords-lesson":{title:`Slash Chords`,sections:[{text:`A slash chord is a chord played over a specific bass note. It's the secret to 'stacking' harmony without the headache.`,visual:`CHART`,chartData:`C / Bb = C Major triad over a Bb bass
 Result: Bb Major 13 (#11)`},{text:`THE BASTARD 11: The most common jazz slash chord is IV / V (e.g., F/G). This gives you a bright, modern G9sus4 sound.`,audio:!0,isProgression:!0,exampleChord:{notes:[`G1`,`F3`,`A3`,`C4`,`C2`,`E3`,`G3`,`B3`]}}]}},Gl=[`C`,`C#`,`D`,`D#`,`E`,`F`,`F#`,`G`,`G#`,`A`,`A#`,`B`],Kl=e=>({Db:`C#`,Eb:`D#`,Gb:`F#`,Ab:`G#`,Bb:`A#`,Cb:`B`,Fb:`E`,"E#":`F`,"B#":`C`})[e]||e,ql=(e,t)=>{let n=Gl.indexOf(Kl(e));return t.map(e=>Gl[(n+e)%12])},Jl={MAJOR:[0,2,4,5,7,9,11,12],NAT_MINOR:[0,2,3,5,7,8,10,12],HARM_MINOR:[0,2,3,5,7,8,11,12],MEL_MINOR_UP:[0,2,3,5,7,9,11,12],MEL_MINOR_DN:[10,8,7,5,3,2,0],IONIAN:[0,2,4,5,7,9,11,12],DORIAN:[0,2,3,5,7,9,10,12],PHRYGIAN:[0,1,3,5,7,8,10,12],LYDIAN:[0,2,4,6,7,9,11,12],MIXOLYDIAN:[0,2,4,5,7,9,10,12],AEOLIAN:[0,2,3,5,7,8,10,12],LOCRIAN:[0,1,3,5,6,8,10,12],TRIAD_MAJ:[0,4,7],TRIAD_MIN:[0,3,7],DOM_7:[0,4,7,10],MAJ_7:[0,4,7,11],MIN_7:[0,3,7,10],MIN_7B5:[0,3,6,10],SUS2:[0,2,7],SUS4:[0,5,7],DOM_7_SUS4:[0,5,7,10],PENTA_MAJ:[0,2,4,7,9,12],PENTA_MIN:[0,3,5,7,10,12],BLUES_MIN:[0,3,5,6,7,10,12],BLUES_MAJ:[0,2,3,4,7,9,12]},Yl={MAJOR:`1 2 3 4 5 6 7 8`,NAT_MINOR:`1 2 b3 4 5 b6 b7 8`,HARM_MINOR:`1 2 b3 4 5 b6 7 8`,MEL_MINOR_UP:`1 2 b3 4 5 6 7 8`,IONIAN:`1 2 3 4 5 6 7 8`,DORIAN:`1 2 b3 4 5 6 b7 8`,PHRYGIAN:`1 b2 b3 4 5 b6 b7 8`,LYDIAN:`1 2 3 #4 5 6 7 8`,MIXOLYDIAN:`1 2 3 4 5 6 b7 8`,AEOLIAN:`1 2 b3 4 5 b6 b7 8`,LOCRIAN:`1 b2 b3 4 b5 b6 b7 8`,TRIAD_MAJ:`1 3 5`,TRIAD_MIN:`1 b3 5`,MAJ_7:`1 3 5 7`,MIN_7:`1 b3 5 b7`,DOM_7:`1 3 5 b7`,MIN_7B5:`1 b3 b5 b7`,SUS2:`1 2 5`,SUS4:`1 4 5`,DOM_7_SUS4:`1 4 5 b7`},Xl=[`C`,`G`,`D`,`A`,`E`,`B`,`Gb`,`Db`,`Ab`,`Eb`,`Bb`,`F`],Zl=e=>Xl.map(t=>{let n=Gl.indexOf(Kl(t)),r=e===`MINOR`?(n+9)%12:(n+3)%12;return{name:`RELATIVE ${e}\nOF ${t.replace(`A#`,`Bb`)}`,answer:[Gl[r]],hint:e===`MINOR`?`THE VI DEGREE`:`THE III DEGREE`}}),Ql=e=>Xl.map(t=>({name:`NOTES IN\n${t} ${e.replace(`TRIAD_`,``).replace(`_`,` `)}`,answer:ql(t,Jl[e]),hint:Yl[e]})),$l=(e=`TRIAD`)=>{let t=e===`TRIAD`?[`TRIAD_MAJ`,`TRIAD_MIN`]:[`MAJ_7`,`MIN_7`,`DOM_7`,`MIN_7B5`],n=[],r=[`ROOT`,`1ST`,`2ND`,`3RD`],i={TRIAD_MAJ:[`1 3 5`,`3 5 1`,`5 1 3`],TRIAD_MIN:[`1 b3 5`,`b3 5 1`,`5 1 b3`]},a={MAJ_7:[`1 3 5 7`,`3 5 7 1`,`5 7 1 3`,`7 1 3 5`],MIN_7:[`1 b3 5 b7`,`b3 5 b7 1`,`5 b7 1 b3`,`b7 1 b3 5`],DOM_7:[`1 3 5 b7`,`3 5 b7 1`,`5 b7 1 3`,`b7 1 3 5`],MIN_7B5:[`1 b3 b5 b7`,`b3 b5 b7 1`,`b5 b7 1 b3`,`b7 1 b3 b5`]};for(let o=0;o<24;o++){let o=Xl[Math.floor(Math.random()*Xl.length)],s=t[Math.floor(Math.random()*t.length)],c=ql(o,Jl[s]),l=Math.floor(Math.random()*c.length),u=[...c.slice(l),...c.slice(0,l)],d=e===`TRIAD`?i[s][l]:a[s][l];n.push({name:`${o} ${s.replace(`TRIAD_`,``).replace(`_`,` `)}\n${r[l]} INV`,notes:u,answer:u,hint:d,startNote:`${u[0]}3`})}return n},eu=[`C`,`C#`,`D`,`D#`,`E`,`F`,`F#`,`G`,`G#`,`A`,`A#`,`B`],tu=()=>{let e=[...eu,...eu];for(let t=e.length-1;t>0;t--){let n=Math.floor(Math.random()*(t+1));[e[t],e[n]]=[e[n],e[t]]}return e.map(e=>({name:e.replace(`A#`,`Bb`).replace(`D#`,`Eb`).replace(`G#`,`Ab`).replace(`C#`,`Db`).replace(`F#`,`Gb`),notes:[e],startNote:`C3`}))},nu=()=>{let e=[{label:`m2`,s:1},{label:`M2`,s:2},{label:`m3`,s:3},{label:`M3`,s:4},{label:`P4`,s:5},{label:`d5`,s:6},{label:`P5`,s:7},{label:`m6`,s:8},{label:`M6`,s:9},{label:`m7`,s:10},{label:`M7`,s:11}];return Array.from({length:24},()=>{let t=Math.floor(Math.random()*eu.length),n=e[Math.floor(Math.random()*e.length)];return{name:`${n.label} OF\n${eu[t].replace(`A#`,`Bb`)}`,notes:[eu[(t+n.s)%12]],startNote:`C3`}})};function ru(){let[e,t]=(0,_.useState)({showKeyLabels:!0}),[n,r]=(0,_.useState)(!1),[i,a]=(0,_.useState)(`MENU`),[o,s]=(0,_.useState)(null),[c,l]=(0,_.useState)(null),[u,d]=(0,_.useState)(!1),[f,p]=(0,_.useState)(()=>{let e=localStorage.getItem(`jazz_bastard_records`);return e?JSON.parse(e):{}});(0,_.useEffect)(()=>{let e=document.createElement(`link`);e.href=`https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap`,e.rel=`stylesheet`,document.head.appendChild(e);let t=document.createElement(`style`);t.innerHTML=`
-      body { margin: 0; background-color: #0d0d0d; display: flex; justify-content: center; min-height: 100vh; overflow-x: hidden; user-select: none; touch-action: none; }
+      body { 
+        margin: 0; 
+        background: radial-gradient(circle at center, #1a1a1a 0%, #0d0d0d 100%); 
+        background-attachment: fixed;
+        display: flex; 
+        justify-content: center; 
+        min-height: 100vh; 
+        overflow-x: hidden; 
+        user-select: none; 
+        touch-action: none; 
+      }
       #mobile-viewport { 
-        width: 100vw; height: 100dvh; max-width: 412px; background: #0d0d0d;
-        position: relative; overflow-y: auto; overflow-x: hidden; display: flex; flex-direction: column; opacity: 0; transition: opacity 0.5s ease-in; 
+        width: 100vw; 
+        height: 100dvh; 
+        max-width: 412px; 
+        background: transparent;
+        position: relative; 
+        overflow-y: auto; 
+        overflow-x: hidden; 
+        display: flex; 
+        flex-direction: column; 
+        opacity: 0; 
+        transition: opacity 0.5s ease-in; 
       }
       #mobile-viewport.ready { opacity: 1; }
       * { font-family: 'Inter', sans-serif !important; -webkit-tap-highlight-color: transparent; box-sizing: border-box; }
